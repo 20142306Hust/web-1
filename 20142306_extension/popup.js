@@ -7,24 +7,19 @@ chrome.webNavigation.onHistoryStateUpdated.addListener(function() {
 					
 		}
 				
-
 		// set time
 		if(localStorage.time === "NaN" || localStorage.time === "undefined"){
 			localStorage.setItem("time", 1);
-			alert(localStorage.time)
+			alert(123)
 		}
-		// set boolean add time
-		if(localStorage.boo === "NaN" || localStorage.boo === "undefined"){
-			localStorage.setItem("boo", 0);
-
-		}
+		
 		// set time start when connect facebook
 		if(localStorage.start === "NaN" || localStorage.start === "undefined"){
 			localStorage.setItem("start", 0);
 		}
 
 		if(localStorage.maxtime === "NaN" || localStorage.maxtimeo === "undefined"){
-			localStorage.setItem("maxtime", 10000000000000);
+			localStorage.setItem("maxtime", 100000000000);
 
 		}
 		// if connect fb
@@ -34,8 +29,8 @@ chrome.webNavigation.onHistoryStateUpdated.addListener(function() {
            	var t = Number(new Date())/1000;
 			// localStorage.setItem("start", t);
 			chrome.tabs.onRemoved.addListener(function(tabid, removed) {
-				
-				alert("tab closed")
+				localStorage.time = Number(localStorage.time) + (Number(new Date())/1000 - t)
+				// alert(localStorage.time)
 			})
 			
 		}
