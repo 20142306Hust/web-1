@@ -1,0 +1,28 @@
+{
+  "name": "Facebook - Quản lý thời gian",
+  "description": "Quản lý thời gian sử dụng",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "history",
+    "tabs",
+    "<all_urls>",
+    "http://*/",
+    "https://*/",
+    "storage",    
+    "webNavigation" 
+  ],
+  "background": {
+    "scripts": ["popup.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["popup.js"]
+    }
+  ],
+  "manifest_version": 2
+}

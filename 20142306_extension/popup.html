@@ -1,0 +1,41 @@
+<html>
+  <head>
+	<title>Quản lý Facebook Extension</title>
+	<meta charset="UTF-8" />
+  </head>
+  <body>
+    
+    <div class="container-fluid">
+      <div class="row">
+        <p onload="compute()">Popup lấy thông tin</p>
+        <div>
+            <button id="popup">Số lần vào facebook:</button>
+            <p id="myCheckFB"></p>
+        </div>
+        <div>
+            <button id="max">Max time(s):</button>
+            <p id="myLimitTime"></p>
+        </div>
+        <div>
+          <button id="timming">Thời gian truy cập(s):</button>
+          <p id="myTimeCheckFB"></p>
+        </div>
+        <div>
+          Set limit time
+          <br>
+          <input type="number" name="settime">
+          <button id="Submit">Submit</button>
+          </br>
+        </div>
+
+        <p id="myText"></p>
+        
+      <button id="refresh">Refresh</button>
+      <button id="clear">Clear all data</button>   
+      </div>
+    </div>
+    <script src="popup.js">
+      
+    </script>
+  </body>
+</html>
